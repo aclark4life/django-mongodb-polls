@@ -1,5 +1,5 @@
 [project]
-name = "django-polls"
+name = "django-mongodb-polls"
 version = "0.1.0"
 dependencies = [
     "factory-boy",
