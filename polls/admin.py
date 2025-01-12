@@ -1,5 +1,10 @@
 from django.contrib import admin
-from .models import Choice, Question
+from .models import Choice, Question, Poll
+
+
+@admin.register(Poll)
+class PollAdmin(admin.ModelAdmin):
+    """Poll Admin"""
 
 
 @admin.register(Choice)
