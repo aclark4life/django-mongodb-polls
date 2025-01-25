@@ -3,9 +3,10 @@ import datetime
 from django.db import models
 from django.utils import timezone
 from django_mongodb_backend.fields import EmbeddedModelField
+from django_mongodb_backend.models import EmbeddedModel
 
 
-class Poll(models.Model):
+class Poll(EmbeddedModel):
     question = EmbeddedModelField("Question")
 
 
