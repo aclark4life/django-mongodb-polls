@@ -6,11 +6,11 @@ from django_mongodb_backend.fields import EmbeddedModelField
 from django_mongodb_backend.models import EmbeddedModel
 
 
-class Poll(EmbeddedModel):
+class Poll(models.Model):
     question = EmbeddedModelField("Question")
 
 
-class Question(models.Model):
+class Question(EmbeddedModel):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField("date published", null=True)
 
